@@ -1,4 +1,4 @@
-// Token Radar, model radar-2 (Node 22, standard library only).
+// Token Radar, model radar-3 (Node 22, standard library only).
 //
 // The program reads the sealed snapshot from /input/snapshot.json (or --input <file|dir>),
 // scores every rankable pre-token protocol with the model in lib/model.ts, writes the ranked
@@ -8,8 +8,9 @@
 //
 // The dashboard is a static page, no framework and no network: dashboard/index.html,
 // dashboard/app.css and dashboard/app.js read /output/data.js, which this program writes from
-// the same board. The page recomputes each row's implied value from the snapshot figures, so
-// the number on screen and the number in board.json are the same arithmetic.
+// the same board. The page recomputes each row's implied value and readiness score from the
+// snapshot figures, so the numbers on screen and the numbers in board.json are the same
+// arithmetic.
 //
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts --input <kit>/input/snapshot.json
